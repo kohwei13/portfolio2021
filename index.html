@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wei'sPortfolio</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
+
+</head>
+<style>
+  .my-font {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+  /* banner-css */
+  .banner {
+
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  .banner-pic {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./indeximg/j01.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: ease-in-out 1s;
+
+  }
+
+  .banner-title {
+    position: absolute;
+    top: calc(50% - 117px);
+    left: calc(50% - 140px);
+    text-align: center;
+  }
+
+  #mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
+
+  }
+
+  #mainNav .navbar-toggler {
+    padding: 0.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    background-color: #fcfcfc;
+    border: 0;
+  }
+
+  #mainNav .navbar-brand {
+    color: #fed136;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    letter-spacing: 0.0625em;
+    text-transform: uppercase;
+  }
+
+  #mainNav .navbar-brand img {
+    height: 1.5rem;
+  }
+
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.95rem;
+    color: #fff;
+    letter-spacing: 0.0625em;
+  }
+
+  #mainNav .navbar-nav .nav-item .nav-link.active,
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #fed136;
+  }
+
+  @media (min-width: 992px) {
+    #mainNav {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      border: none;
+      background-color: transparent;
+      transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    }
+
+    #mainNav .navbar-brand {
+      font-size: 1.5em;
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    #mainNav .navbar-brand img {
+      height: 2rem;
+      transition: height 0.3s ease-in-out;
+    }
+
+    #mainNav.navbar-shrink {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: #212529;
+    }
+
+    #mainNav.navbar-shrink .navbar-brand {
+      font-size: 1.25em;
+    }
+
+    #mainNav.navbar-shrink .navbar-brand svg,
+    #mainNav.navbar-shrink .navbar-brand img {
+      height: 1.5rem;
+    }
+
+    #mainNav .navbar-nav .nav-item {
+      margin-right: 1rem;
+    }
+
+    #mainNav .navbar-nav .nav-item:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .pic {
+
+
+    overflow: hidden;
+
+  }
+
+  .pic img {
+
+    transition: transform 1s;
+
+  }
+
+
+  .pic img:hover {
+
+    transform: scale(1.2);
+  }
+
+
+  .pic-d {
+
+
+    overflow: hidden;
+
+  }
+
+  .pic-d img {
+
+    transition: transform .5s, filter 1.5s ease;
+    filter: grayscale(100%);
+
+  }
+
+
+  .pic-d img:hover {
+    filter: grayscale(0);
+    transform: scale(1.2, 1.2);
+
+  }
+
+  /* footer-css */
+  .bg-f {
+    background: url(./indeximg/b01.jpg);
+
+  }
+
+  .md-icon {
+    width: 30px;
+    height: 30px;
+
+  }
+
+  .sm-icon {
+    width: 20px;
+  }
+
+  .copyright {
+    background-color: #212529;
+    color: rgb(252, 245, 235);
+    font-size: 14px;
+  }
+
+  .footer-bg {
+    background: url(./indeximg/b01.jpg);
+    width: 100%;
+  }
+
+  .ft-f a {
+    font-size: 16px;
+    color: dimgray;
+  }
+
+  .ft-f a:hover {
+    color: rgb(218, 78, 113);
+    text-decoration: none;
+  }
+
+  .ft-f a:active {
+    color: rgb(50, 130, 221);
+    text-decoration: none;
+  }
+
+  .videobox {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+
+  .videobox iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<body id="page-top" data-aos-duration="1000" data-aos-easing="ease-out-back" data-aos-once="false" data-aos-delay="0">
+
+
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+
+      <button class="navbar-toggler navbar-toggler-le" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">Menu
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#page-top">Top</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#design">Design</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#illust">Illust</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#bottom">Bottom</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- Masthead-->
+
+
+
+  <section>
+    <div class="banner">
+      <div class="banner-pic"></div>
+      <div class="banner-title  my-font">
+        <div class="display-4 text-white" style="font-weight: bold;"><br>WEIWEI's<br>WEBSITE</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- title-code -->
+  <div class="container text-center py-2" id="about">
+    <div></div>
+    <h1 class="display-4" data-aos-delay="800">ABOUT</h1>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="card" data-aos="fade-up-right">
+          <img src="./indeximg/a02.jpg" class="d-block w-100">
+        </div>
+      </div>
+      <div class="col-md-6 mt-5 col-12 my-font ">
+        <h1>創意發想</h1><br>
+        <p>街道上的樹木，路旁的花叢，<br>
+          看似平凡的卻有不平凡故事，<br>
+          將其平面化簡化的風格呈現，<br>
+          手工繪製的線條又更有那味，<br>
+          再融入一點動畫般的小生物，<br>
+          希望將所見的美麗分享給你。
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- design -->
+  <div class="container  py-2" id="design">
+    <div></div>
+    <h1 class="display-4 text-center">DESIGN</h1>
+    <div class="my-font text-center pb-4">
+      於職場打磨的作品，成果的結晶
+    </div>
+    <div class="videobox pt-3 ">
+      <iframe frameborder="0" src="https://www.youtube.com/embed/B4pDDtF0jaU" allowFullScreen="true">
+      </iframe>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-6  pt-3 ">
+        <div class="pic-d card">
+          <img src="./indeximg/b001.jpg" class="d-block w-100 ">
+        </div>
+      </div>
+      <div class="col-6 col-md-6   pt-3">
+        <div class="pic-d card" data-aos="fade-up">
+          <img src="./indeximg/b002.jpg" class="d-block w-100 ">
+        </div>
+      </div>
+      <div class="col-12 col-md-12   pt-3">
+        <div class="card" data-aos="flip-up">
+          <img src="./indeximg/db-1.jpg" class="d-block w-100 ">
+        </div>
+      </div>
+      <div class="col-12 col-md-6   pt-3">
+        <div class="card" data-aos="fade-up">
+          <img src="./indeximg/b003.jpg" class="d-block w-100 ">
+        </div>
+      </div>
+      <div class="col-12 col-md-6  pt-3">
+        <div class="card">
+          <img src="./indeximg/b004.jpg" class="d-block w-100 ">
+        </div>
+      </div>
+      <div class="col-12 col-md-12   pt-3">
+        <div class="card">
+          <img src="./indeximg/db-2.jpg" class="d-block w-100 ">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- carousel code -->
+  <!-- <div id="carouselExampleInterval" class="carousel slide carousel-fade carousel-fluid py-2" data-ride="carousel"
+      data-interval="1000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./indeximg/c01.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="./indeximg/c02.gif" class="d-block w-100">
+        </div>
+      </div>
+    </div> -->
+
+
+  <!-- portfolio -->
+  <div class="container py-2" id="illust">
+    <h1 class="display-4 text-center" data-aos-delay="1500">ILLUST</h1>
+    <div class="my-font text-center pb-4">
+      The lunatic,<br>
+      the lover and the poet<br>
+      are of imagination all compact.
+    </div>
+    <div class="row my-font">
+
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;" data-aos="zoom-in-up">
+
+          <img src="./indeximg/p01.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;">
+
+          <img src="./indeximg/p02.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;">
+
+          <img src="./indeximg/p03.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;" data-aos="zoom-in-up">
+          <img src="./indeximg/p04.jpg" class="w-100 d-block">
+        </div>
+      </div>
+
+      <div class="col-3  col-md-3 py-2">
+        <div style="width: auto;">
+          <img src="./indeximg/gi01.gif" class="w-100 d-block">
+        </div>
+      </div>
+      <div class="col-3  col-md-3 py-2">
+        <div style="width: auto;">
+          <img src="./indeximg/gi02.gif" class="w-100 d-block">
+        </div>
+      </div>
+      <div class="col-3  col-md-3 py-2">
+        <div style="width: auto;">
+          <img src="./indeximg/gi03.gif" class="w-100 d-block">
+        </div>
+      </div>
+      <div class="col-3  col-md-3 py-2">
+        <div style="width: auto;">
+          <img src="./indeximg/gi04.gif" class="w-100 d-block">
+        </div>
+      </div>
+
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;" data-aos="fade-right">
+
+          <img src="./indeximg/p05.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;">
+
+          <img src="./indeximg/p06.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+
+
+      <div class="container">
+        <!-- carousel code -->
+        <div id="carouselExampleInterval" class="carousel slide carousel-fade carousel-fluid py-2" data-ride="carousel"
+          data-interval="1000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./indeximg/c04.gif" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="./indeximg/c03.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item ">
+              <img src="./indeximg/c02.gif" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="./indeximg/c01.jpg" class="d-block w-100">
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;" data-aos="fade-right">
+
+          <img src="./indeximg/p07.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;">
+
+          <img src="./indeximg/p08.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+      <div class="col-6  col-md-6 py-2">
+        <div class="card pic" style="width: auto;">
+
+          <img src="./indeximg/p09.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+      <div class="col-6  col-md-6 py-2">
+        <div class="card pic" style="width: auto;" data-aos="fade-right">
+
+          <img src="./indeximg/p10.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+    </div>
+    <!-- carousel code -->
+    <div id="carouselExampleInterval" class="carousel slide carousel-fade carousel-fluid py-2" data-ride="carousel"
+      data-interval="1000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./indeximg/c04.gif" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="./indeximg/c03.jpg" class="d-block w-100">
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="row">
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;" data-aos="zoom-right">
+
+          <img src="./indeximg/p11.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;" data-aos="zoom-right">
+
+          <img src="./indeximg/p12.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;">
+
+          <img src="./indeximg/p13.jpg" class="w-100 d-block">
+
+
+        </div>
+      </div>
+      <div class="col-12  col-md-6 py-2">
+        <div class="card pic" style="width: auto;" data-aos="fade-right">
+          <img src="./indeximg/p14.jpg" class="w-100 d-block">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="py-4 footer-bg mt-4" id="bottom">
+    <section>
+      <div class="container ">
+        <div class="row ">
+          <div class="col-md-4 py-2">
+            <h5 class="mb-4">SNS</h5>
+            <p class="text-left "></p>
+            <div class="d-flex">
+              <a href="https://www.facebook.com/weiwei.koh.7/"><img src="./indeximg/fi-1.gif" class="md-icon mr-2"></a>
+
+              <a href="https://www.instagram.com/weiweikoh13/"><img src="./indeximg/ii-1.gif" class="md-icon mr-2"></a>
+
+              <a href="https://www.pixiv.net/users/8204464"><img src="./indeximg/pi-1.gif" class="md-icon mr-2"></a>
+
+
+            </div>
+          </div>
+          <div class="col-md-4 py-2">
+            <h5 class="mb-4">BackTop</h5>
+            <a href="#page-top"><img src="./indeximg/gi02.gif" alt=""
+                class="w-50 d-block animate__animated animate__bounce animate__infinite	"></a>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <h5 class="mb-4">Contact</h5>
+            <ul class="list-unstyled">
+              <li><img src="./indeximg/mail-1.png" class="sm-icon">
+                kohwei13@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </footer>
+  <div class="copyright text-center py-2 ">
+    2021&copy WeiWei'sPortfolio
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+
+  <!-- -------------掛載Smooth Scroll-------------- -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js">
+  </script>
+
+
+
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+
+  <script>
+    //   window.onscroll = function () {
+    //           var nowScrollTop_safari = document.body.scrollTop
+    //           var nowScrollTop_google = document.documentElement.scrollTop
+    //           var scrollPic = document.querySelector('.scrollPic')
+
+    //           if (nowScrollTop_safari > 200 || nowScrollTop_google > 200) {
+
+    //               scrollPic.classList.add('hideScroll')
+    //           }
+    //           else {
+
+    //               scrollPic.classList.remove('hideScroll')
+    //           }
+    //           // nav
+    //           if (nowScrollTop_safari > 1080 || nowScrollTop_google > 1080) {
+    //               navSection.classList.add('nav-opacity')
+    //           }
+    //           else {
+    //               navSection.classList.remove('.nav-opacity')
+    //           }
+    //           // gototop
+    //           if (nowScrollTop_safari > 500 || nowScrollTop_google > 500) {
+    //               gototop.classList.add('show-gototop')
+    //           }
+    //           else {
+    //               gototop.classList.remove('show-gototop')
+    //           }
+    //       }
+
+    // 
+  </script>
+
+</html>
